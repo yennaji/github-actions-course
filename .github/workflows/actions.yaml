@@ -1,4 +1,4 @@
-name: Actiosn workflow
+name: a new workflow name
 
 on: [push]
 
@@ -12,4 +12,4 @@ jobs:
         with:
           who-to-greet: "stranger"
       - name: logging the output of hello step
-        run: echo ${{steps.hello.outputs.time}}
+        run: echo "${{steps.hello.outputs.time}}"
