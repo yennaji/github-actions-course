@@ -1,0 +1,15 @@
+name: Actiosn workflow
+
+on: [push]
+
+jobs:
+  run-some-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: A hello world step
+        id: hello
+        uses: actions/hello-world-javascript-action@v1.1
+        with:
+          who-to-greet: "stranger"
+      - name: logging the output of hello step
+        run: echo ${{steps.hello.outputs.time}}
